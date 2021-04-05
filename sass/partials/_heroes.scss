@@ -1,0 +1,439 @@
+%hero_background {
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 380px;
+    @include MQ(M) {
+        min-height: 100%;
+    }
+}
+
+.hero_area {
+    @extend %hero_background;
+
+    .container {
+        z-index: 10;
+    }
+}
+
+
+.about_hero {
+    position: relative;
+    background-color: black;
+    min-height: 50vh;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 3;
+        // background: linear-gradient(0deg, $brand_inverse 0%, rgba(white,0) 30%);
+    }
+    @include MQ(M) {
+        padding-top: 100px;
+        height: 100vh;
+
+    }
+
+    &.about_hero1{
+        background-image: url('../img/banners/pix/first_banner.png');
+    }
+    &.about_hero2{
+        background-image: url('../img/banners/pix/second_banner.png');
+    }
+    &.about_hero3{
+        background-image: url('../img/banners/pix/third_banner.png');
+    }
+    &.about_hero4{
+        background-image: url('../img/banners/pix/fourth_banner.png');
+    }
+    &.about_hero5{
+        background-image: url('../img/banners/pix/fifth_banner.png');
+    }
+    &.about_hero6{
+        background-image: url('../img/banners/pix/sixth_banner.png');
+    }
+
+    &.company_profile{
+        background-image: url('../img/banners/pix/company-profile.png');
+        @include MQ(M) {
+            padding-top: 100px;    
+            min-height: 100vh;
+        }
+    }
+}
+
+.imageBlob {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    right: 0;
+    left: 0;
+    top: 160px;
+}
+
+.logoBgPattern {
+    background-image: url(../img/banners/logo_bg_grey.svg);
+}
+
+.floatingAirplane {
+    // max-height: 850px;
+    background-size: 100%;
+    @include center(x);
+    background-image: url(../img/banners/pageFloatingIcons.png);
+
+    @include MQ(M) {
+        width: 80%;
+        top: 130px;
+    }
+}
+
+.heroContentWrapper {
+    min-height: 65vh;
+    padding: 80px 0 70px;
+    // justify-content: space-between;
+    // align-content: center;
+    // align-items: center;
+
+    @include MQ(M) {
+        padding-bottom: 150px;
+    }
+}
+
+.textWrapperMeasured {
+    max-width: 380px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    @include MQ(M) {
+        width: 30%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include MQ(XXL) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @include MQ-MAX(S) {
+        text-align: center;
+    }
+
+}
+
+.heroPositionedIMageHolder {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -20px;
+
+    @include MQ(M) {
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-left: 0;
+    }
+
+    @include MQ(XXL) {
+        width: 60%;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.heroBannerImage {
+    display: block;
+
+    @include MQ(M) {
+        position: absolute;
+        @include center(y);
+        right: 0;
+    }
+}
+
+.infoBlobImage {
+    max-width: 770px;
+}
+
+.heroContentBoxWrapper {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgba($brand_primary, 0);
+
+    @include MQ(M) {
+        padding: 50px;
+    }
+}
+
+.hero_header_stroke{
+      border-top: 2px solid white;
+      width: 100px;
+      margin-bottom: 2rem;
+    //   display: inline;
+
+}
+
+.hero_title {
+    font-size: 2.35rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    @include break-inside(avoid);
+    
+    @include MQ(M) {
+        font-size: 3.75rem;
+    }
+}
+
+.hero_blub {
+    font-size: 1.25rem;
+    color: inherit;
+
+    @include MQ(M) {
+        font-size: 1.5rem;
+    }
+}
+
+.hero_ten_header{
+    border-bottom: 2px solid white;
+    padding-top: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+.hero_ten{
+    font-size: 7.5rem;
+    font-weight: 900;
+    line-height: 8.125rem;
+}
+
+.imageItemHolder {
+    padding-bottom:20px;
+
+    img {
+        display: inline-block;
+        max-width: 370px;
+        width: 100%;
+    }
+
+    @include MQ(M) {
+        padding: 0 30px
+    }
+}
+
+.logo_grid_wrapper{
+    background: rgba(43, 48, 147, 0.2);
+}
+.logo_grid {
+    display: grid;
+    @include flexbox();
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    justify-content: center;
+    height: 50vh;
+}
+
+.logo_item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+   
+
+    + .logo_item {
+        margin-left: 30px;
+    }
+    &.small{
+        img {
+            display: block;
+            height: 40px;
+            width: auto;
+        }
+    }
+    img {
+        display: block;
+        height: 80px;
+        width: auto;
+    }
+
+    @include MQ-MAX(S) {
+        flex-basis: 85px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// .grey_scaled {
+//     @include filter(grayscale(1));
+//     @include transition(filter .4s ease-in-out 0s, opacity .4s ease-in-out 0s);
+//     opacity: .3;
+
+//     &:hover, &:focus {
+//         opacity: 1;
+//         @include filter(grayscale(0));
+//     }
+// }
+%service_background {
+    width: 100%;
+    position: relative;
+    @include MQ(M) {
+        height: 100%;
+    }
+}
+.serviceCards{
+    width: 100%;
+    position: relative;
+    @include MQ(M) {
+        height: 400px;
+    }
+    margin-top: 5rem;
+    .serviceCardsImage{
+        z-index: 2;
+        width: 80%;
+        height: 100%;  
+      }
+
+    .serviceCardsText{
+        background: #FFFFFF;
+        box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
+        border-radius: 10px 20px 10px 10px;
+        padding: 25px 16px;
+        @include transition(all .6s ease-in-out);
+        position: absolute;
+        // bottom: 20%;
+        width: 100%;
+        left: 3rem;
+        z-index: 3;
+        display: none;  
+        p{
+            font-size: 1rem;
+            line-height: 28px;
+        }     
+
+        @include MQ(M){
+            bottom: -4rem;
+            left: 2rem;
+            display: block;
+            // &.right{
+            //     bottom: 6rem;
+            //     left: 3rem;
+            //  }
+
+        }
+    }
+}
+
+.serviceCardsNavigationWrapper{
+    position: relative;
+    overflow: hidden;
+    padding: 1.8rem;
+    height: 280px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
+    margin-top: 1.5rem;
+    &.s_card_sm{
+        border-radius: 50px 20px 20px 50px;
+    }
+    &.s_card_lg{
+
+        border-radius: 20px 50px 50px 20px;
+        // transform: matrix(-1, 0, 0, 1, 0, 0);
+        &.inverse{
+            border-radius: 50px 20px 20px 50px;
+        }
+    }
+    @include MQ(M) {
+        padding: 2.5rem;
+    }
+        img {
+            height: 70px;
+            width: auto;
+            display: inline-block;
+        }
+        .s_title {
+            min-height: 32px;
+            position: absolute;
+            bottom: 2rem;
+        }
+
+}
+.shadow{
+    margin: 5rem auto;
+//   background-size: cover;
+//   width: 100%;
+//   position: relative;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   z-index: 1;
+//   overflow: hidden;
+//   height: 100%;
+//   background-image: url('../img/banners/service/oil_rig.svg');
+
+img{
+    width: 86%;
+    height: 100%; 
+    display: block;
+    margin: 5rem auto;
+    @include MQ(M) {
+        position: absolute;
+        top:-2.1rem;
+        right: 3.3rem;
+        width: 86%;
+        height: auto; 
+        object-fit: contain;   
+     }
+ } 
+
+
+ &.shadow_red{
+    border-radius: 20px 20px 20px 20px;  
+    background: rgba(236,29,33, 0.2);
+    box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
+    @include MQ(M) {
+        border-radius: 50px 20px 20px 50px;  
+        width: 91%;
+        height: 68%;  
+     }
+ }
+ &.shadow_blue{
+    border-radius: 20px 20px 20px 20px;  
+     background:rgba(43, 48, 147, 0.2);
+ box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
+ @include MQ(M) {
+    border-radius: 50px 20px 20px 50px;  
+    width: 90%;
+    height: 80%;  
+ }
+
+ }
+ &.shadow_green{
+    border-radius: 20px 20px 20px 20px;  
+  background: rgba(111,207,151,0.2);
+box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
+@include MQ(M) {
+    border-radius: 50px 20px 20px 50px;  
+    width: 90%;
+    height: 88%;  
+ }
+}
+}
+
+
+

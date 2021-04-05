@@ -1,0 +1,107 @@
+.wcCalculator {
+    clear: both;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.wcCalculatorControls {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.wcCalculatorInfoWidget {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.wcCalculatorInfoStatBox {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+    @include MQ(M) {
+        padding: 40px 50px;
+    }
+}
+
+.statSnippetRow {
+    display: block;
+    padding: 30px 0;
+}
+
+.statSnippetMain {
+    border-top: 1px solid $border_grey_light;
+    border-bottom: 1px solid $border_grey_light;
+}
+
+.wcCalculatorChart {
+    clear: both;
+    display: block;
+    padding: 15px 0;
+}
+
+.statLabel {
+    color: $color_grey_dark;
+    font-size: 16px;
+    display: inline-block;
+
+    .title & {
+        margin-left: 5px;
+    }
+}
+
+.accordion{
+
+    .card{
+        padding: 1.2rem 1.25rem;
+        // padding-bottom: 1rem;
+
+
+
+        .card-header{
+            border-radius: 20px !important;
+            margin-bottom: 0;
+            background-color: white;
+            border-bottom: none !important;
+            img.accIcon{
+                height: 50px;
+                width: 50px;
+            }
+            .arrowDown{
+                position: relative;
+                background-image:url('../img/icons/arrowDown.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 40px;
+                width: 40px;
+            }
+            .arrowUp{
+                position: relative;
+                background-image:url('../img/icons/arrowDown.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 40px;
+                width: 40px;
+                @include transform(rotate(180deg));
+                
+
+            }
+
+        }
+        background: #FFFFFF;
+        box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1) !important;
+        border-radius: 20px !important;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px !important;
+        line-height: 28px !important;
+        margin-bottom: 2rem;
+    }
+   
+    
+}
