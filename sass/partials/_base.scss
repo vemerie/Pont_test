@@ -33,6 +33,7 @@ body {
     font-weight: 400;
     position: relative;
     line-height: 1.65;
+    background-color: $color_grey_light;
     
     &.scroll_lock {
         overflow: hidden;
