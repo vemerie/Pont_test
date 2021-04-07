@@ -7,26 +7,27 @@ html * {
 /* line 6, ../sass/partials/_base.scss */
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
-/* line 10, ../sass/partials/_base.scss */
+/* line 12, ../sass/partials/_base.scss */
 img {
   width: 100%;
   height: auto;
 }
 
-/* line 15, ../sass/partials/_base.scss */
+/* line 17, ../sass/partials/_base.scss */
 ul, ol {
   padding: 0;
   margin: 0;
 }
 
-/* line 20, ../sass/partials/_base.scss */
+/* line 22, ../sass/partials/_base.scss */
 figure {
   margin: 0;
 }
 
-/* line 24, ../sass/partials/_base.scss */
+/* line 26, ../sass/partials/_base.scss */
 body {
   font-family: "Helvetica", sans-serif;
   font-size: 1rem;
@@ -38,146 +39,146 @@ body {
   position: relative;
   line-height: 1.65;
 }
-/* line 35, ../sass/partials/_base.scss */
+/* line 37, ../sass/partials/_base.scss */
 body.scroll_lock {
   overflow: hidden;
 }
 
 /* Backgrounds */
-/* line 42, ../sass/partials/_base.scss */
+/* line 44, ../sass/partials/_base.scss */
 .bg__white {
   background-color: white !important;
 }
 
-/* line 46, ../sass/partials/_base.scss */
+/* line 48, ../sass/partials/_base.scss */
 .bg__off_white {
   background-color: #f5f5f5 !important;
 }
 
-/* line 50, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 .bg__primary {
   background-color: #2B3093 !important;
 }
 
-/* line 54, ../sass/partials/_base.scss */
+/* line 56, ../sass/partials/_base.scss */
 .bg__secondary {
   background-color: #FF0000 !important;
 }
 
-/* line 58, ../sass/partials/_base.scss */
+/* line 60, ../sass/partials/_base.scss */
 .bg__inverse {
   background-color: #f0fbff !important;
   background: linear-gradient(0deg, #ffffff 0%, #f0fbff 100%) !important;
 }
 
-/* line 63, ../sass/partials/_base.scss */
+/* line 65, ../sass/partials/_base.scss */
 .bg__inverse_fadded {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f0fbff 20%, #f0fbff 85%, rgba(255, 255, 255, 0) 100%) !important;
 }
 
-/* line 67, ../sass/partials/_base.scss */
+/* line 69, ../sass/partials/_base.scss */
 .fadeoutWhite {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%) !important;
 }
 
-/* line 71, ../sass/partials/_base.scss */
+/* line 73, ../sass/partials/_base.scss */
 .bg__black {
   background-color: #000000 !important;
 }
 
-/* line 75, ../sass/partials/_base.scss */
+/* line 77, ../sass/partials/_base.scss */
 .color__primary {
   color: #2B3093 !important;
 }
 
-/* line 79, ../sass/partials/_base.scss */
+/* line 81, ../sass/partials/_base.scss */
 .color__secondary {
   color: #FF0000 !important;
 }
 
-/* line 83, ../sass/partials/_base.scss */
+/* line 85, ../sass/partials/_base.scss */
 .color__black {
   color: #000000 !important;
 }
 
-/* line 87, ../sass/partials/_base.scss */
+/* line 89, ../sass/partials/_base.scss */
 .color__danger {
   color: #cc1b1b !important;
 }
 
-/* line 91, ../sass/partials/_base.scss */
+/* line 93, ../sass/partials/_base.scss */
 .color__grey_light {
   color: #979797 !important;
 }
 
-/* line 95, ../sass/partials/_base.scss */
+/* line 97, ../sass/partials/_base.scss */
 .color__white {
   color: white !important;
 }
 
-/* line 99, ../sass/partials/_base.scss */
+/* line 101, ../sass/partials/_base.scss */
 .color__default {
   color: #2B3093 !important;
 }
 
-/* line 103, ../sass/partials/_base.scss */
+/* line 105, ../sass/partials/_base.scss */
 .font-sm {
   font-size: 14px !important;
 }
 
-/* line 107, ../sass/partials/_base.scss */
+/* line 109, ../sass/partials/_base.scss */
 .font-default {
   font-size: 16px !important;
 }
 
-/* line 111, ../sass/partials/_base.scss */
+/* line 113, ../sass/partials/_base.scss */
 .font-md {
   font-size: 21px !important;
 }
 
-/* line 115, ../sass/partials/_base.scss */
+/* line 117, ../sass/partials/_base.scss */
 .font-lg {
   font-size: 32px !important;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 115, ../sass/partials/_base.scss */
+  /* line 117, ../sass/partials/_base.scss */
   .font-lg {
     font-size: 48px !important;
   }
 }
 
-/* line 123, ../sass/partials/_base.scss */
+/* line 125, ../sass/partials/_base.scss */
 .font-bold {
   font-weight: 900 !important;
 }
 
-/* line 127, ../sass/partials/_base.scss */
+/* line 129, ../sass/partials/_base.scss */
 .font-regular {
   font-weight: 400 !important;
 }
 
-/* line 131, ../sass/partials/_base.scss */
+/* line 133, ../sass/partials/_base.scss */
 .text-style-italics {
   font-style: italic !important;
 }
 
-/* line 135, ../sass/partials/_base.scss */
+/* line 137, ../sass/partials/_base.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 139, ../sass/partials/_base.scss */
+/* line 141, ../sass/partials/_base.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 143, ../sass/partials/_base.scss */
+/* line 145, ../sass/partials/_base.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 147, ../sass/partials/_base.scss */
+/* line 149, ../sass/partials/_base.scss */
 .text_clipped {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -185,61 +186,61 @@ body.scroll_lock {
   width: 100%;
 }
 
-/* line 151, ../sass/partials/_base.scss */
+/* line 153, ../sass/partials/_base.scss */
 .caps_upper {
   text-transform: uppercase !important;
 }
 
-/* line 155, ../sass/partials/_base.scss */
+/* line 157, ../sass/partials/_base.scss */
 .caps_normal {
   text-transform: none !important;
 }
 
-/* line 159, ../sass/partials/_base.scss */
+/* line 161, ../sass/partials/_base.scss */
 .container {
   width: auto;
   position: relative;
   max-width: 1170px;
 }
 
-/* line 165, ../sass/partials/_base.scss */
+/* line 167, ../sass/partials/_base.scss */
 .content_narrow {
   max-width: 970px;
 }
 
-/* line 169, ../sass/partials/_base.scss */
+/* line 171, ../sass/partials/_base.scss */
 .centered {
   float: none;
   margin: 0 auto;
 }
 
-/* line 174, ../sass/partials/_base.scss */
+/* line 176, ../sass/partials/_base.scss */
 .hidden {
   display: none !important;
 }
 
 /* Tablets and phablets */
 @media only screen and (max-width: 767px) {
-  /* line 179, ../sass/partials/_base.scss */
+  /* line 181, ../sass/partials/_base.scss */
   .hidden-sm {
     display: none !important;
   }
 
-  /* line 183, ../sass/partials/_base.scss */
+  /* line 185, ../sass/partials/_base.scss */
   .text-center-sm {
     text-align: center !important;
   }
 }
 /* Tablets and phablets */
 @media only screen and (min-width: 768px) {
-  /* line 189, ../sass/partials/_base.scss */
+  /* line 191, ../sass/partials/_base.scss */
   .visible_sm {
     visibility: hidden;
     opacity: 0;
     display: none;
   }
 }
-/* line 197, ../sass/partials/_base.scss */
+/* line 199, ../sass/partials/_base.scss */
 h1,
 h2,
 h3,
@@ -249,115 +250,115 @@ h6 {
   margin: 0;
 }
 
-/* line 206, ../sass/partials/_base.scss */
+/* line 208, ../sass/partials/_base.scss */
 h1 {
   font-size: 48px;
 }
 
-/* line 210, ../sass/partials/_base.scss */
+/* line 212, ../sass/partials/_base.scss */
 h2 {
   font-size: 32px;
 }
 
-/* line 214, ../sass/partials/_base.scss */
+/* line 216, ../sass/partials/_base.scss */
 h3 {
   font-size: 28px;
 }
 
-/* line 218, ../sass/partials/_base.scss */
+/* line 220, ../sass/partials/_base.scss */
 h4 {
   font-size: 21px;
 }
 
-/* line 222, ../sass/partials/_base.scss */
+/* line 224, ../sass/partials/_base.scss */
 h5 {
   font-size: 18px;
 }
 
-/* line 226, ../sass/partials/_base.scss */
+/* line 228, ../sass/partials/_base.scss */
 h6 {
   font-size: 16px;
 }
 
-/* line 230, ../sass/partials/_base.scss */
+/* line 232, ../sass/partials/_base.scss */
 p {
   margin: 0;
   -moz-page-break-inside: avoid;
   -webkit-column-break-inside: avoid;
   break-inside: avoid;
 }
-/* line 234, ../sass/partials/_base.scss */
+/* line 236, ../sass/partials/_base.scss */
 p + p {
   padding-top: .5em;
 }
 
-/* line 239, ../sass/partials/_base.scss */
+/* line 241, ../sass/partials/_base.scss */
 address, address span {
   display: block;
   line-height: 1.45;
 }
 
-/* line 244, ../sass/partials/_base.scss */
+/* line 246, ../sass/partials/_base.scss */
 .margin_top_sm {
   margin-top: 15px !important;
 }
 
-/* line 248, ../sass/partials/_base.scss */
+/* line 250, ../sass/partials/_base.scss */
 .margin_top_md {
   margin-top: 30px !important;
 }
 
-/* line 252, ../sass/partials/_base.scss */
+/* line 254, ../sass/partials/_base.scss */
 .margin_top_lg {
   margin-top: 45px !important;
 }
 
-/* line 256, ../sass/partials/_base.scss */
+/* line 258, ../sass/partials/_base.scss */
 .margin_top_xl {
   margin-top: 60px !important;
 }
 
-/* line 260, ../sass/partials/_base.scss */
+/* line 262, ../sass/partials/_base.scss */
 .margin_bottom_x {
   margin-bottom: 5px !important;
 }
 
-/* line 264, ../sass/partials/_base.scss */
+/* line 266, ../sass/partials/_base.scss */
 .margin_bottom_sm {
   margin-bottom: 15px !important;
 }
 
-/* line 268, ../sass/partials/_base.scss */
+/* line 270, ../sass/partials/_base.scss */
 .margin_bottom_md {
   margin-bottom: 30px !important;
 }
 
-/* line 272, ../sass/partials/_base.scss */
+/* line 274, ../sass/partials/_base.scss */
 .margin_bottom_lg {
   margin-bottom: 45px !important;
 }
 
-/* line 276, ../sass/partials/_base.scss */
+/* line 278, ../sass/partials/_base.scss */
 .margin_bottom_xl {
   margin-bottom: 60px !important;
 }
 
-/* line 280, ../sass/partials/_base.scss */
+/* line 282, ../sass/partials/_base.scss */
 .no_margin {
   margin: 0 !important;
 }
 
-/* line 284, ../sass/partials/_base.scss */
+/* line 286, ../sass/partials/_base.scss */
 .padding-top-none {
   padding-top: 0 !important;
 }
 
-/* line 288, ../sass/partials/_base.scss */
+/* line 290, ../sass/partials/_base.scss */
 .padding-bottom-none {
   padding-bottom: 0 !important;
 }
 
-/* line 292, ../sass/partials/_base.scss */
+/* line 294, ../sass/partials/_base.scss */
 .no_border {
   border: none !important;
 }
@@ -2151,12 +2152,12 @@ header[role="banner"] .brand_img {
 }
 /* line 257, ../sass/partials/_heroes.scss */
 .logo_item + .logo_item {
-  margin-left: 30px;
+  margin-left: 90px;
 }
 /* line 261, ../sass/partials/_heroes.scss */
 .logo_item.small img {
   display: block;
-  height: 40px;
+  height: 35px;
   width: auto;
 }
 /* line 267, ../sass/partials/_heroes.scss */
