@@ -24,7 +24,7 @@
 .about_hero {
     position: relative;
     background-color: black;
-    height: 100vh;
+    min-height: 70vh;
     @include MQ(M) {
         padding-top: 100px;
         height: 100vh;
