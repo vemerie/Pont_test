@@ -1490,7 +1490,7 @@ header[role="banner"] .brand_img {
 .logo_link > img {
   vertical-align: middle;
   display: inline-block;
-  height: 70%;
+  height: 60%;
   width: auto;
   /* Tablets and phablets */
 }
