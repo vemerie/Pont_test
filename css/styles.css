@@ -1853,7 +1853,7 @@ header[role="banner"] .brand_img {
 .about_hero {
   position: relative;
   background-color: black;
-  min-height: 70vh;
+  min-height: 80vh;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
