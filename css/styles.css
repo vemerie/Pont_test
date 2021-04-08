@@ -3390,7 +3390,6 @@ footer[role="contentinfo"] {
 }
 /* line 137, ../sass/partials/_lists.scss */
 .titleListItem::before {
-  height: 16px;
   width: 16px;
   display: inline-flex;
   content: "";
@@ -3401,11 +3400,11 @@ footer[role="contentinfo"] {
   background-image: url(../img/icons/list_icon_sm.svg);
   /* Tablets and phablets */
 }
-/* line 148, ../sass/partials/_lists.scss */
+/* line 147, ../sass/partials/_lists.scss */
 .listMarkerTick .titleListItem::before {
   background-image: url(../img/icons/listMarkerTick.svg);
 }
-/* line 152, ../sass/partials/_lists.scss */
+/* line 151, ../sass/partials/_lists.scss */
 .statSnippetRow .titleListItem::before {
   height: 24px;
   width: 24px;
@@ -3415,27 +3414,28 @@ footer[role="contentinfo"] {
   /* line 137, ../sass/partials/_lists.scss */
   .titleListItem::before {
     margin-top: 10px;
+    height: 16px;
   }
-  /* line 161, ../sass/partials/_lists.scss */
+  /* line 162, ../sass/partials/_lists.scss */
   .statSnippetRow .titleListItem::before {
     margin-top: 0;
   }
 }
-/* line 167, ../sass/partials/_lists.scss */
+/* line 168, ../sass/partials/_lists.scss */
 .titleListItem > span {
   flex-grow: 1;
   width: 100%;
 }
-/* line 172, ../sass/partials/_lists.scss */
+/* line 173, ../sass/partials/_lists.scss */
 .titleListItem + .titleListItem {
   margin-top: 2px;
 }
-/* line 175, ../sass/partials/_lists.scss */
+/* line 176, ../sass/partials/_lists.scss */
 .statSnippetRow .titleListItem + .titleListItem {
   margin-top: 15px;
 }
 
-/* line 181, ../sass/partials/_lists.scss */
+/* line 182, ../sass/partials/_lists.scss */
 .heroListMem {
   display: block;
   padding-left: 5px;

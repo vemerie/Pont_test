@@ -135,7 +135,6 @@
     @include flexbox();
 
     &::before {
-        height: 16px;
         width: 16px;
         display: inline-flex;
         content: "";
@@ -157,6 +156,8 @@
 
         @include MQ(M) {
             margin-top: 10px;
+            height: 16px;
+
 
             .statSnippetRow & {
                 margin-top: 0;
