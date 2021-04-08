@@ -24,16 +24,7 @@
 .about_hero {
     position: relative;
     background-color: black;
-    min-height: 50vh;
-    &::before {
-        content: "";
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0; left: 0;
-        z-index: 3;
-        // background: linear-gradient(0deg, $brand_inverse 0%, rgba(white,0) 30%);
-    }
+    height: 70vh;
     @include MQ(M) {
         padding-top: 100px;
         height: 100vh;
@@ -245,7 +236,7 @@
     flex-wrap: wrap;
     overflow-x: auto;
     justify-content: center;
-    height: 20vh;
+    height: 25vh;
     @include MQ(M){
         height: 40vh;
 
