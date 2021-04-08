@@ -245,15 +245,20 @@
     flex-wrap: wrap;
     overflow-x: auto;
     justify-content: center;
-    height: 35vh;
+    height: 20vh;
+    @include MQ(M){
+        height: 40vh;
+
+    }
 }
 
 .logo_item {
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
-   
 
+
+   @include MQ(M){
     + .logo_item {
         margin-left: 90px;
     }
@@ -270,11 +275,15 @@
         width: auto;
     }
 
+   }
+
+ 
+
     @include MQ-MAX(S) {
         flex-basis: 85px;
 
         img {
-            width: 100%;
+            width: 70%;
         }
     }
 }

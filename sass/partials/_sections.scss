@@ -433,14 +433,16 @@ footer[role="contentinfo"] {
 .we_card{
     background: linear-gradient(206.28deg, #2B3093 60.05%, rgba(43, 48, 147, 0.8) 77.07%);
     border-radius: 8px;
+   
 }
 .footer_we{
     background-color: $brand_primary;
-    padding: 2rem;
+    padding: 1.0rem;
+    padding-bottom: 1.5rem;
     color: white;
     border-radius:0px 0px 5px 5px;
-    font-size: 18px;
-line-height: 24px;
+    font-size: 17px;
+line-height: 15px;
 background: transparent;
 
 }

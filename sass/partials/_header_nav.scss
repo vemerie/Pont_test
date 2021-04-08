@@ -98,9 +98,15 @@ header[role="banner"] {
     >img {
         vertical-align: middle;
         display: inline-block;
-        height: 80%;
+        height: 70%;
+        width: auto;
+        @include MQ(M){
+            height: 100%;
+            width: auto
+        }
 
     }
+   
 }
 
 .navMenu {
