@@ -58,7 +58,37 @@
     .card{
         padding: 1.2rem 1.25rem;
         // padding-bottom: 1rem;
+        p{
+            line-height: 26px;
+        }
+        .card-body{
+            padding: .8rem 1.2rem ;
+        }
+        .small_he{
+            font-size: 16px;
+        }
 
+        &.small{
+            p{
+                font-size: 16px;
+            }
+            button span{
+                font-size: 16px;
+
+            }
+          
+            .card-header{
+                img.accIcon{
+                    height: 42px;
+                    width: 42px;
+                }
+                .arrowDown, .arrowUp{
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+          
+        }
 
 
         .card-header{
@@ -67,8 +97,8 @@
             background-color: white;
             border-bottom: none !important;
             img.accIcon{
-                height: 50px;
-                width: 50px;
+                height: 45px;
+                width: 45px;
             }
             .arrowDown{
                 position: relative;

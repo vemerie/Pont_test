@@ -98,10 +98,10 @@ header[role="banner"] {
     >img {
         vertical-align: middle;
         display: inline-block;
-        height: 60%;
+        height: 50%;
         width: auto;
         @include MQ(M){
-            height: 80%;
+            height: 60%;
             width: auto
         }
 
