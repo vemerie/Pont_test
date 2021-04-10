@@ -2718,13 +2718,14 @@ footer[role="contentinfo"] {
 }
 /* line 8, ../sass/partials/_plugin.scss */
 .carausel_slick .slick-dots {
+  position: absolute;
   background-color: transparent;
   list-style: none;
   display: block;
-  padding: 50px 0 0;
+  padding: 10px 0 0;
   width: 100%;
   text-align: center;
-  bottom: 20px;
+  bottom: 10px;
   z-index: 10;
 }
 /* line 20, ../sass/partials/_plugin.scss */
@@ -2804,7 +2805,7 @@ footer[role="contentinfo"] {
 .carausel_slick .slick-prev {
   background-image: url(../img/icons/arrowLeft.svg);
   right: 150px;
-  bottom: 100px;
+  bottom: 30px;
 }
 /* line 86, ../sass/partials/_plugin.scss */
 .carousel-control-prev .carausel_slick .slick-prev {
@@ -2814,7 +2815,7 @@ footer[role="contentinfo"] {
 .carausel_slick .slick-next {
   background-image: url(../img/icons/arrowRight.svg);
   right: 80px;
-  bottom: 100px;
+  bottom: 30px;
 }
 /* line 96, ../sass/partials/_plugin.scss */
 .carousel-control-next .carausel_slick .slick-next {
@@ -2842,10 +2843,9 @@ footer[role="contentinfo"] {
   background-color: #FF0000;
 }
 
-/* line 129, ../sass/partials/_plugin.scss */
+/* line 128, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-arrow {
   cursor: pointer;
-  display: inline-flex;
   width: 35px;
   height: 60px;
   padding: 5px;
@@ -2866,27 +2866,35 @@ footer[role="contentinfo"] {
   transition: all 0.6s linear;
   position: absolute;
   z-index: 5;
+  display: none !important;
+  /* Tablets and phablets */
 }
-/* line 148, ../sass/partials/_plugin.scss */
+@media only screen and (min-width: 768px) {
+  /* line 128, ../sass/partials/_plugin.scss */
+  .brandMediaCoverage .slick-arrow {
+    display: inline-flex !important;
+  }
+}
+/* line 151, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-arrow:hover, .brandMediaCoverage .slick-arrow:focus {
   opacity: 1;
   outline: 0;
 }
-/* line 153, ../sass/partials/_plugin.scss */
+/* line 156, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-prev {
   right: 150px;
   top: 7px;
   color: #2B3093;
   background-image: url(../img/icons/arrow_left_slick.svg);
 }
-/* line 160, ../sass/partials/_plugin.scss */
+/* line 165, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-next {
   right: 80px;
   top: 7px;
   color: #2B3093;
   background-image: url(../img/icons/arrow_right_slick.svg);
 }
-/* line 167, ../sass/partials/_plugin.scss */
+/* line 172, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots {
   list-style: none;
   display: block;
@@ -2894,7 +2902,7 @@ footer[role="contentinfo"] {
   width: 100%;
   text-align: center;
 }
-/* line 174, ../sass/partials/_plugin.scss */
+/* line 179, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots button {
   border: 0;
   display: block;
@@ -2909,32 +2917,32 @@ footer[role="contentinfo"] {
   background-color: #d5d5d5;
   cursor: pointer;
 }
-/* line 185, ../sass/partials/_plugin.scss */
+/* line 190, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots button:hover, .brandMediaCoverage .slick-dots button:focus {
   outline: none;
 }
-/* line 190, ../sass/partials/_plugin.scss */
+/* line 195, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots li {
   position: relative;
   display: inline-block;
   margin: 0 5px;
 }
-/* line 195, ../sass/partials/_plugin.scss */
+/* line 200, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots li.slick-active button {
   border-color: transparent;
   background-color: #2B3093;
   width: 50px;
 }
-/* line 204, ../sass/partials/_plugin.scss */
+/* line 209, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-inner {
   overflow: visible;
 }
-/* line 208, ../sass/partials/_plugin.scss */
+/* line 213, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-indicators {
   position: relative;
   padding: 10px 0 20px;
 }
-/* line 212, ../sass/partials/_plugin.scss */
+/* line 217, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-indicators > li {
   background-color: #E5E5E5;
   cursor: pointer;
@@ -2942,7 +2950,7 @@ footer[role="contentinfo"] {
   width: 10px;
   border-radius: 50%;
 }
-/* line 220, ../sass/partials/_plugin.scss */
+/* line 225, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-indicators .active {
   background-color: #FF0000;
 }
