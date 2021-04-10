@@ -15,9 +15,14 @@ header[role="banner"] {
         height: 100%;
         position: relative;
     }
+    // .container-fluid{
+    //     width: 100% !important;
+    // }
 
     @include MQ(L) {
         height: $header_height_l;
+        padding-left: 60px;
+        padding-right: 60px;
     }
 }
 
