@@ -237,6 +237,7 @@
     overflow-x: auto;
     justify-content: center;
     height: 25vh;
+
     @include MQ(M){
         height: 40vh;
 
@@ -247,17 +248,39 @@
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
+    img {
+        display: block;
+        height: 80px;
+        width: auto;
+    }
 
-
-   @include MQ(M){
     + .logo_item {
-        margin-left: 90px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     &.small{
         img {
             display: block;
+            margin-top: 10%;
+            height: 35px;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+
+   @include MQ(M){
+    + .logo_item {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+    &.small{
+        img {
+            display: block;
+            margin-top: 10%;
             height: 35px;
             width: auto;
+            object-fit: contain;
         }
     }
     img {
@@ -268,13 +291,12 @@
 
    }
 
- 
-
     @include MQ-MAX(S) {
-        flex-basis: 85px;
-
+        flex-basis: 45px;
+        // flex-basis: 85px;
         img {
-            width: 70%;
+            width: 100%;
+            object-fit: contain;
         }
     }
 }

@@ -154,8 +154,8 @@
         }   
     }
     .slick-prev {
-        right: 150px;
-        top: 7px;
+        right: 120px;
+        top: 5px;
         color: $brand_primary;
         background-image: url(../img/icons/arrow_left_slick.svg);
 
@@ -163,8 +163,8 @@
 
     }
     .slick-next {
-        right: 80px;
-        top: 7px;
+        right: 75px;
+        top: 5px;
         color: $brand_primary;
         background-image: url(../img/icons/arrow_right_slick.svg);      
     }
@@ -227,4 +227,13 @@
         }
     }
   
+}
+
+.portfolio_carausel{
+    .slick-slide {
+        opacity: .4;
+        &.slick-current{
+            opacity: .4;
+        }
+    }
 }
