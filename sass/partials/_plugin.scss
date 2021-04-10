@@ -144,6 +144,7 @@
         // @include center(y);
         z-index: 5;
         display: none !important;
+        
         @include MQ(M){
             display: inline-flex !important;
         } 
@@ -158,8 +159,6 @@
         top: 5px;
         color: $brand_primary;
         background-image: url(../img/icons/arrow_left_slick.svg);
-
-       
 
     }
     .slick-next {

@@ -2898,26 +2898,26 @@ footer[role="contentinfo"] {
     display: inline-flex !important;
   }
 }
-/* line 151, ../sass/partials/_plugin.scss */
+/* line 152, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-arrow:hover, .brandMediaCoverage .slick-arrow:focus {
   opacity: 1;
   outline: 0;
 }
-/* line 156, ../sass/partials/_plugin.scss */
+/* line 157, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-prev {
   right: 120px;
   top: 5px;
   color: #2B3093;
   background-image: url(../img/icons/arrow_left_slick.svg);
 }
-/* line 165, ../sass/partials/_plugin.scss */
+/* line 164, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-next {
   right: 75px;
   top: 5px;
   color: #2B3093;
   background-image: url(../img/icons/arrow_right_slick.svg);
 }
-/* line 172, ../sass/partials/_plugin.scss */
+/* line 171, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots {
   list-style: none;
   display: block;
@@ -2925,7 +2925,7 @@ footer[role="contentinfo"] {
   width: 100%;
   text-align: center;
 }
-/* line 179, ../sass/partials/_plugin.scss */
+/* line 178, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots button {
   border: 0;
   display: block;
@@ -2940,32 +2940,32 @@ footer[role="contentinfo"] {
   background-color: #d5d5d5;
   cursor: pointer;
 }
-/* line 190, ../sass/partials/_plugin.scss */
+/* line 189, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots button:hover, .brandMediaCoverage .slick-dots button:focus {
   outline: none;
 }
-/* line 195, ../sass/partials/_plugin.scss */
+/* line 194, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots li {
   position: relative;
   display: inline-block;
   margin: 0 5px;
 }
-/* line 200, ../sass/partials/_plugin.scss */
+/* line 199, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .slick-dots li.slick-active button {
   border-color: transparent;
   background-color: #2B3093;
   width: 50px;
 }
-/* line 209, ../sass/partials/_plugin.scss */
+/* line 208, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-inner {
   overflow: visible;
 }
-/* line 213, ../sass/partials/_plugin.scss */
+/* line 212, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-indicators {
   position: relative;
   padding: 10px 0 20px;
 }
-/* line 217, ../sass/partials/_plugin.scss */
+/* line 216, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-indicators > li {
   background-color: #E5E5E5;
   cursor: pointer;
@@ -2973,16 +2973,16 @@ footer[role="contentinfo"] {
   width: 10px;
   border-radius: 50%;
 }
-/* line 225, ../sass/partials/_plugin.scss */
+/* line 224, ../sass/partials/_plugin.scss */
 .brandMediaCoverage .carousel-indicators .active {
   background-color: #FF0000;
 }
 
-/* line 233, ../sass/partials/_plugin.scss */
+/* line 232, ../sass/partials/_plugin.scss */
 .portfolio_carausel .slick-slide {
   opacity: .4;
 }
-/* line 235, ../sass/partials/_plugin.scss */
+/* line 234, ../sass/partials/_plugin.scss */
 .portfolio_carausel .slick-slide.slick-current {
   opacity: .4;
 }
