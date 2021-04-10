@@ -1,3 +1,56 @@
+<?php
+
+    use PHPMailer\PHPMailer\PHPMailer;
+
+    require __DIR__ . '/vendor/autoload.php';
+
+    $errors = [];
+    $errorMessage = '';
+    // print_r($_POST);
+
+    if (!empty($_POST)) {
+
+        // print_r($_POST);
+
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+
+        $mail = new PHPMailer();
+
+        // specify SMTP credentials
+        $mail->isSMTP();
+        $mail->Host = 'smtp.mailtrap.io';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'cd9d6d71f72169';
+        $mail->Password = '5dd5c9d85fdc87';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 2525;
+
+        $mail->setFrom($email, 'Mailtrap Website');
+        $mail->addAddress('akasu@dervac.com', 'Me');
+        $mail->Subject = 'New message from your website';
+
+        // Enable HTML if needed
+        $mail->isHTML(true);
+
+        $bodyParagraphs = ["First Name: {$first_name}", "Last Name: {$last_name}", "Email: {$email}", "Message:", nl2br($message)];
+        $body = join('<br />', $bodyParagraphs);
+        $mail->Body = $body;
+
+        if ($mail->send()) {
+            // echo $body;
+
+            header('Location: contact.php'); // redirect to 'thank you' page
+        } else {
+            $errorMessage = 'Oops, something went wrong. Mailer Error: ' . $mail->ErrorInfo;
+        }
+    }
+
+?>
+
 <!doctype html>
 <html lang="en" class="no-js">
 
@@ -61,7 +114,7 @@
                             <a href="service.html" class="menuLinkItem">Services</a>
                         </div> -->
                         <div class="menuListItem active">
-                            <a href="contact.html" class="menuLinkItem">Contact</a>
+                            <a href="contact.php" class="menuLinkItem">Contact</a>
                         </div>
                     </nav>
                     <nav class="navMenu menuAlt">
@@ -100,25 +153,25 @@
                     <div class="formPanel">
                       <div class="container">
                           <div class="col-md-8 offset-md-2">
-                            <form @submit.prevent="ValidCaptcha" id ="form">
+                            <form method="POST" action="form.php" id ="form">
                                 <h3 class="title title_lg font-bold text-center">Mail Us</h3>
 
                                 <div class="form-group ">
                                     <label for="" class="control-label text-style-italics">First Name*</label>
-                                    <input required  type="text" class="form-control inputRounded" placeholder="First Name">
+                                    <input required name="first_name" type="text" class="form-control inputRounded" placeholder="First Name">
                                 </div>
                                 <div class="form-group ">
                                     <label for="" class="control-label text-style-italics">Last Name*</label>
-                                    <input required  type="text" class="form-control inputRounded" placeholder="Last Name">
+                                    <input required name="last_name" type="text" class="form-control inputRounded" placeholder="Last Name">
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label text-style-italics">Email Address*</label>
-                                    <input required  type="email" class="form-control inputRounded" placeholder="Enter your Email Address">
+                                    <input required name="email" type="email" class="form-control inputRounded" placeholder="Enter your Email Address">
                                 </div>
                              
                                 <div class="form-group">
                                     <label class="control-label text-style-italics">Comments</label>
-                                    <textarea required  class="form-control inputRounded" rows="10" placeholder="Add any other relevant information you wish to share"></textarea>
+                                    <textarea required name="message" class="form-control inputRounded" rows="10" placeholder="Add any other relevant information you wish to share"></textarea>
                                 </div>
                                 <!-- <div class="captcha">  
                                     <input type="text" id="txtCaptcha" style=" border: none !important; font-weight: bold; font-size: 30px; font-family: 'Brush Script MT', cursive;" />
@@ -134,7 +187,7 @@
                                 </div>   -->
                                
                                 <div class="section_cto text-center">
-                                    <button :disabled="loading" class="btn btn-primary btn-block" type="submit">SUBMIT</button>
+                                    <button class="btn btn-primary btn-block" type="submit">SUBMIT</button>
                                 </div>
                             </form>
                           </div>
