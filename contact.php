@@ -1,53 +1,62 @@
+
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-    use PHPMailer\PHPMailer\PHPMailer;
+require __DIR__ . '/vendor/autoload.php';
 
-    require __DIR__ . '/vendor/autoload.php';
+$mail = new PHPMailer(true);
 
-    $errors = [];
-    $errorMessage = '';
-    // print_r($_POST);
+if(isset($_POST['cont_btn'])){                           
+    //Set PHPMailer to use SMTP.
+    $mail->isSMTP();            
+    //Set SMTP host name                          
+    $mail->Host = "mail.pontesmanies.com";
+    //Set this to true if SMTP host requires authentication to send email
+    $mail->SMTPAuth = true;                          
+    //Provide username and password     
+    $mail->Username = "admin@pontesmanies.com";                 
+    $mail->Password = "Building better apps!";                           
+    //If SMTP requires TLS encryption then set it
+    $mail->SMTPSecure = "tls";                           
+    //Set TCP port to connect to
+    $mail->Port = 587; 
+    
+    // 
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    
+    $mail->From = $email;
+    $mail->FromName = $first_name." ".$last_name;
+    
+    $mail->addAddress("vimeron2020@gmail.com", "Recepient Name");
+    
+    $bp = "First Name: ".$first_name ."<br> Last Name: ".$last_name ."<br> Email: ".$email. "<br> Message: ".nl2br($message);
+    // $bodyParagraphs = ["First Name: {$first_name}", "Last Name: {$last_name}", "Email: {$email}", "Message:", nl2br($message)];
+    $body = $bp;
+    
+    
+    $mail->isHTML(true);
+    
+    $mail->Subject = "New message from your website";
+    $mail->Body = $body;
 
-    if (!empty($_POST)) {
-
-        // print_r($_POST);
-
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-
-
-        $mail = new PHPMailer();
-
-        // specify SMTP credentials
-        $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'cd9d6d71f72169';
-        $mail->Password = '5dd5c9d85fdc87';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 2525;
-
-        $mail->setFrom($email, 'Mailtrap Website');
-        $mail->addAddress('akasu@dervac.com', 'Me');
-        $mail->Subject = 'New message from your website';
-
-        // Enable HTML if needed
-        $mail->isHTML(true);
-
-        $bodyParagraphs = ["First Name: {$first_name}", "Last Name: {$last_name}", "Email: {$email}", "Message:", nl2br($message)];
-        $body = join('<br />', $bodyParagraphs);
-        $mail->Body = $body;
-
-        if ($mail->send()) {
-            // echo $body;
-
-            header('Location: contact.php'); // redirect to 'thank you' page
-        } else {
-            $errorMessage = 'Oops, something went wrong. Mailer Error: ' . $mail->ErrorInfo;
-        }
+    
+    try {
+        $mail->send();
+        echo "Message has been sent successfully";
+   
+    } catch (Exception $e) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+       
     }
+
+}   
+
+
 
 ?>
 
@@ -153,7 +162,7 @@
                     <div class="formPanel">
                       <div class="container">
                           <div class="col-md-8 offset-md-2">
-                            <form method="POST" action="form.php" id ="form">
+                            <form method="POST" action="contact.php" id ="form">
                                 <h3 class="title title_lg font-bold text-center">Mail Us</h3>
 
                                 <div class="form-group ">
@@ -187,7 +196,7 @@
                                 </div>   -->
                                
                                 <div class="section_cto text-center">
-                                    <button class="btn btn-primary btn-block" type="submit">SUBMIT</button>
+                                    <button name="cont_btn" class="btn btn-primary btn-block" type="submit">SUBMIT</button>
                                 </div>
                             </form>
                           </div>

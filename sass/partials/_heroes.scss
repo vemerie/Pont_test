@@ -370,6 +370,10 @@
     background: #FFFFFF;
     box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
     margin-top: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+
     &.s_card_sm{
         border-radius: 50px 20px 20px 50px;
     }
@@ -397,9 +401,15 @@
 
 }
 .shadow{
+    position: relative;
+    // top:-2.1rem;
+    // right: 3.3rem;
     margin: 5rem auto;
 //   background-size: cover;
-//   width: 100%;
+  width: 100%;
+  height: 400px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0) !important;
+
 //   position: relative;
 //   background-position: center;
 //   background-repeat: no-repeat;
@@ -409,50 +419,61 @@
 //   background-image: url('../img/banners/service/oil_rig.svg');
 
 img{
-    width: 86%;
+    width: 100%;
     height: 100%; 
     display: block;
     margin: 5rem auto;
     @include MQ(M) {
-        position: absolute;
-        top:-2.1rem;
-        right: 3.3rem;
-        width: 86%;
+       
+        width: 100%;
         height: auto; 
         object-fit: contain;   
      }
  } 
 
 
- &.shadow_red{
+ .shadow_red{
+    position: absolute;
+    z-index: -2;
+    left: 1.3em;
+    top: 1.3em;
     border-radius: 20px 20px 20px 20px;  
     background: rgba(236,29,33, 0.2);
     box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
     @include MQ(M) {
         border-radius: 50px 20px 20px 50px;  
-        width: 91%;
-        height: 68%;  
+        width:100%;
+        height: 100%;  
+        // background-color: red;
      }
  }
- &.shadow_blue{
+ .shadow_blue{
+    position: absolute;
+    z-index: -2;
+    left: 1.3em;
+    top: 1.3em;
     border-radius: 20px 20px 20px 20px;  
-     background:rgba(43, 48, 147, 0.2);
- box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
- @include MQ(M) {
+    background:rgba(43, 48, 147, 0.2);
+    box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
+    @include MQ(M) {
     border-radius: 50px 20px 20px 50px;  
-    width: 90%;
-    height: 80%;  
+    width:100%;
+    height: 100%;   
  }
 
  }
- &.shadow_green{
+ .shadow_green{
+    position: absolute;
+    z-index: -2;
+    left: 1.3em;
+    top: 1.3em;
     border-radius: 20px 20px 20px 20px;  
-  background: rgba(111,207,151,0.2);
-box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
+    background: rgba(111,207,151,0.2);
+    box-shadow: 0px 4px 100px rgba(13, 13, 13, 0.1);
 @include MQ(M) {
     border-radius: 50px 20px 20px 50px;  
-    width: 90%;
-    height: 88%;  
+    width:100%;
+    height: 100%;   
  }
 }
 }
